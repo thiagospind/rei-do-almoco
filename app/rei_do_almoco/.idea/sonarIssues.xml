@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorCargo.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorCargoNivelSalario.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorConselho.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorContrato.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorCurriculo.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorSalario.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/public/js/rh.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/public/js/util.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/resources/views/contratos.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/resources/views/gerencialCurriculo.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/resources/views/home/login.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/resources/views/listaCargoNivelSalario.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/resources/views/listaCargos.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/resources/views/listaConselhos.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/resources/views/listaContratos.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/routes/web.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/.env">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Http/Controllers/PretendenteController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Pretendente.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/public/css/rei.css">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/layout/app.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/listaPretendente.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/navbar.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/pretendente.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/routes/web.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

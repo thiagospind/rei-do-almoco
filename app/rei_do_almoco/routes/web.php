@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',function (){
+    return view('pretendente');
 });
+
+Route::get('/pretendentes','PretendenteController@index');
+Route::get('/pretendentes/novo','PretendenteController@create');
+Route::post('/pretendente/novo','PretendenteController@store');
+Route::post('/pretendente/editar','PretendenteController@update');
+Route::get('/pretendente/editar/{$id}','PretendenteController@edit');
+Route::get('/pretendente/deletar/{$id}','PretendenteController@destroy');

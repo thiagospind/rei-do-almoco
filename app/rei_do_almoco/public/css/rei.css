@@ -1,0 +1,10 @@
+.card{
+    margin: 0 auto;
+    width: 70%;
+    float: none;
+}
+
+.img-thumbnail{
+    width: 100px;
+    height: 100px;
+}
