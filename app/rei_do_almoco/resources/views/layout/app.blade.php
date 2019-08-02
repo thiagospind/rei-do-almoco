@@ -9,6 +9,7 @@
     <title>Rei do Almoço - @yield('title')</title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/rei.css') }}" rel="stylesheet">
 </head>
@@ -23,5 +24,6 @@
         </main>
     </div>
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/rei.js') }}" type="text/javascript"></script>
 </body>
 </html>

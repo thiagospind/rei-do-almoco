@@ -2,12 +2,12 @@
 
 @section('body')
     <div class="container">
-        <div class="card">
+        <div class="card mt-3 pt-3">
             <div class="py-3 text-center">
-                <h2>Pretendentes</h2>
+                <h2>Candidatos</h2>
             </div>
             <div class="card-body">
-                @if(count($pretendente) > 0 )
+                @if(count($candidate) > 0 )
                     <table class="table table-bordered table-hover table-striped rounded">
                         <thead class="text-center">
                             <tr>
@@ -17,16 +17,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($pretendente as $pret)
+                            @foreach($candidate as $cand)
                                 <tr>
-                                    <td><img class="img-thumbnail" src="{{$pret->picture}}"></td>
-                                    <td>{{$pret->name}}</td>
-                                    <td>{{$pret->email}}</td>
+                                    <td><img class="img-thumbnail" src="{{asset('/storage/pictures/'.$cand->picture)}}"></td>
+                                    <td>{{$cand->name}}</td>
+                                    <td>{{$cand->email}}</td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
-                {{$pretendente->links()}}
+                {{$candidate->links()}}
                 @endif
             </div>
         </div>

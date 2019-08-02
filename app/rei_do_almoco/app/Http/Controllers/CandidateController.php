@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Pretendente;
+use App\Candidate;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-class PretendenteController extends Controller
+class CandidateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class PretendenteController extends Controller
      */
     public function index()
     {
-        $pretendente = Pretendente::paginate(10);
-        return view('listaPretendente',compact('pretendente'));
+        $candidate = Candidate::paginate(10);
+        return view('listCandidate',compact('candidate'));
     }
 
     /**
@@ -28,7 +28,7 @@ class PretendenteController extends Controller
      */
     public function create()
     {
-        return view('pretendente');
+        return view('candidate');
     }
 
     /**
@@ -41,23 +41,23 @@ class PretendenteController extends Controller
     {
         $request->validate($this->rules());
 
-        $pretendente = new Pretendente();
+        $candidate = new Candidate();
 
         try {
             DB::beginTransaction();
 
-            $pretendente->name = $request->input('name');
-            $pretendente->email = $request->input('email');
+            $candidate->name = $request->input('name');
+            $candidate->email = $request->input('email');
             $timestamp = Carbon::now()->timestamp;
             $ext = $request->picture->getClientOriginalExtension();
             $picture = $timestamp.'.'.$ext;
-            $request->picture->storeAs('pictures',$picture);
-            $pretendente->picture = $picture;
-            $pretendente->save();
+            $request->picture->storeAs('public/pictures',$picture);
+            $candidate->picture = $picture;
+            $candidate->save();
             DB::commit();
-            return redirect('/pretendentes');
+            return redirect('/candidato');
         } catch(\Exception $exception){
-            if(is_file('/storage/app/picture/$picture')) {
+            if(is_file('/storage/app/public/picture/$picture')) {
                 Storage::delete($picture);
             }
             echo $exception;
@@ -114,7 +114,7 @@ class PretendenteController extends Controller
     public function rules(){
         return [
             'name' => 'required|max:255|min:3',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:candidate',
             'picture' => 'image|mimes:jpeg,bmp,png|max:2048'
         ];
     }

@@ -15,9 +15,11 @@ Route::get('/',function (){
     return view('pretendente');
 });
 
-Route::get('/pretendentes','PretendenteController@index');
-Route::get('/pretendentes/novo','PretendenteController@create');
-Route::post('/pretendente/novo','PretendenteController@store');
-Route::post('/pretendente/editar','PretendenteController@update');
-Route::get('/pretendente/editar/{$id}','PretendenteController@edit');
-Route::get('/pretendente/deletar/{$id}','PretendenteController@destroy');
+Route::get('/candidato','CandidateController@index');
+Route::get('/votar','VoteController@index');
+Route::post('/votar','VoteController@store');
+Route::get('/candidato/novo','CandidateController@create');
+Route::post('/candidato/novo','CandidateController@store');
+Route::post('/candidato/editar','CandidateController@update');
+Route::get('/candidato/editar/{$id}','CandidateController@edit');
+Route::get('/candidato/deletar/{$id}','CandidateController@destroy');

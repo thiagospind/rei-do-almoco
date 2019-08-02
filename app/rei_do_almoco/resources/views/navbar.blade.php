@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="/">
         <img src="{{ asset('/img/crown.svg') }}" height="30" width="30">
     </a>
@@ -8,10 +8,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Cadastrar Pretendente</a>
+                <a class="nav-link" href="/candidato/novo">Cadastrar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Votar</a>
+                <a class="nav-link" href="/votar">Votar</a>
             </li>
         </ul>
     </div>

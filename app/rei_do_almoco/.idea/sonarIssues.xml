@@ -3,6 +3,16 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/PHP Console">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorCargo.php">
           <value>
             <set />
@@ -88,7 +98,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/Candidate.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/Http/Controllers/PretendenteController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Http/Controllers/VoteController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Http/Controllers/VotoController.php">
           <value>
             <set />
           </value>
@@ -98,12 +128,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/Vote.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Voto.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/public/css/rei.css">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/public/js/rei.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/candidate.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/resources/views/layout/app.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/listCandidate.blade.php">
           <value>
             <set />
           </value>
@@ -119,6 +174,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/resources/views/pretendente.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/vote.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/voto.blade.php">
           <value>
             <set />
           </value>

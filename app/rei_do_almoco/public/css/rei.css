@@ -5,6 +5,28 @@
 }
 
 .img-thumbnail{
-    width: 100px;
-    height: 100px;
+    margin: 5px auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.card-voto{
+    margin: 5px auto 5px;
+    width: 220px;
+    height: 330px;
+    float: none;
+    align-items: center;
+}
+
+.clock{
+    font-family: 'Comfortaa', cursive;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 5px;
+    align-items: start;
 }
