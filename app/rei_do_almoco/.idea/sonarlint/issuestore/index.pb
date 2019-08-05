@@ -19,14 +19,6 @@ M
 storage/app/public/.gitignore,9\7\97928df0de452b98741ab5da29b5b240dbde3dce
 F
 config/filesystems.php,0\8\0851bcf6cd0903bba3a25c52b3b65e4e473a57d6
-C
-app/Pretendente.php,b\a\baaed25d290e093b6d3f741f88d8012c222b324a
-U
-%resources/views/pretendente.blade.php,5\c\5c8741a37d4ccd55925fef78aaffc8f0eab1f2a7
-^
-.app/Http/Controllers/PretendenteController.php,2\3\23d724990c4cfb7356f9140f0cdf236d548f029f
-Z
-*resources/views/listaPretendente.blade.php,6\1\617590ded3c870495aae6afdbd7a7bc896ec2bf7
 >
 routes/web.php,6\b\6b9a783d9b43fee50fd28f56dbd1856d2608f305
 @

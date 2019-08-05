@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/',function (){
-    return view('pretendente');
-});
-
+Route::get('/','CandidateController@index');
 Route::get('/candidato','CandidateController@index');
 Route::get('/votar','VoteController@index');
 Route::post('/votar','VoteController@store');
