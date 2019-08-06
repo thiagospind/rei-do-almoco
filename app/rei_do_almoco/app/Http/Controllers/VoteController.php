@@ -6,6 +6,7 @@ use App\Candidate;
 use App\Vote;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VoteController extends Controller
 {
@@ -20,8 +21,9 @@ class VoteController extends Controller
     }
 
     public function index(){
-        $candidate = Candidate::paginate(8);
-        return view('vote',compact('candidate'));
+        $candidate = Candidate::paginate(1);
+        $isTimeVote = $this->isTimeVote();
+        return view('vote',compact('candidate','isTimeVote'));
     }
 
     public function store(Request $request){
@@ -37,5 +39,17 @@ class VoteController extends Controller
                 echo $exception;
             }
         }
+    }
+
+    public function closeVotation(){
+        $votes = DB::table('vote')
+            ->join('candidate','vote.candidate_id','=','candidate.id')
+            ->select(DB::raw('count(*) as votes, candidate_id, time_vote, name, email'))
+            ->whereDate('time_vote','=',Carbon::now()->toDateString())
+            ->groupBy(DB::raw('date(time_vote), candidate_id'))
+            ->orderBy('votes','desc')
+            ->limit(1)
+            ->get();
+        echo $votes;
     }
 }
