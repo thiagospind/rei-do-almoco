@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\WinEmail::class
     ];
 
     /**
@@ -27,10 +27,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->call(function(){
-            $vote = new VoteController();
+        $schedule->command('winemail:send')
+            ->daily('12:02');
 
-        })->daily('12:02');
     }
 
     /**

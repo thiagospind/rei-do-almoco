@@ -3,27 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Candidate;
+use App\Mail\WinnerEmail;
 use App\Vote;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class VoteController extends Controller
 {
 
-    //Verifica se está no horário permitido para votação!
-    public function isTimeVote(){
-        $now = Carbon::now();
-        $iniTime = Carbon::createFromTime(10,0,0);
-        $endTime = Carbon::createFromTime(12,01,0);
-
-        return $now->isBetween($iniTime,$endTime);
-    }
-
     public function index(){
-        $candidate = Candidate::paginate(1);
+        $candidate = Candidate::paginate(4);
         $isTimeVote = $this->isTimeVote();
-        return view('vote',compact('candidate','isTimeVote'));
+        $weekWinner = $this->weekWinner();
+        return view('vote',compact('candidate','isTimeVote',$weekWinner));
     }
 
     public function store(Request $request){
@@ -41,8 +35,17 @@ class VoteController extends Controller
         }
     }
 
+    //Verifica se está no horário permitido para votação!
+    public function isTimeVote(){
+        $now = Carbon::now();
+        $iniTime = Carbon::createFromTime(10,0,0);
+        $endTime = Carbon::createFromTime(12,01,0);
+
+        return $now->isBetween($iniTime,$endTime);
+    }
+
     public function closeVotation(){
-        $votes = DB::table('vote')
+        $winVote = DB::table('vote')
             ->join('candidate','vote.candidate_id','=','candidate.id')
             ->select(DB::raw('count(*) as votes, candidate_id, time_vote, name, email'))
             ->whereDate('time_vote','=',Carbon::now()->toDateString())
@@ -50,6 +53,24 @@ class VoteController extends Controller
             ->orderBy('votes','desc')
             ->limit(1)
             ->get();
-        echo $votes;
+
+        if(isset($winVote) && count($winVote) > 0){
+            Mail::to($winVote[0]->email)
+            ->send(new WinnerEmail($winVote));
+        }
+    }
+
+    public function weekWinner(){
+        $date = new Carbon();
+        $week = $date->weekOfYear;
+
+        return DB::table('vote')
+            ->join('candidate','vote.candidate_id','=','candidate.id')
+            ->select(DB::raw('count(*) as votes, candidate_id, week_year, name, email'))
+            ->where('week_year','<',$week)
+            ->groupBy(DB::raw('week_year, candidate_id'))
+            ->orderBy('votes','desc')
+            ->limit(10)
+            ->get();
     }
 }

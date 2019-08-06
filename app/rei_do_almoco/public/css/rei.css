@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .card{
     margin: 0 auto;
     width: auto;
@@ -12,8 +17,9 @@
 
 .card-voto{
     margin: 5px auto 5px;
-    width: 200px;
-    height: 300px;
+    min-width: 100px;
+    max-width: 180px;
+    height: 225px;
     float: none;
     align-items: center;
     font-size: 12px;
@@ -25,9 +31,49 @@
     font-size: 18px;
 }
 
-.grid {
+/*.grid {*/
+    /*display: grid;*/
+    /*grid-template-columns: 35% 30% 35%;*/
+    /*grid-gap: 5px;*/
+    /*align-items: start;*/
+/*}*/
+
+#main {
     display: grid;
-    grid-template-columns: auto;
-    grid-gap: 5px;
-    align-items: start;
+    grid-template-rows: 9vh 81vh;
+    grid-template-areas: "page-header page-header page-header" "col-left col-center col-right";
 }
+
+/*.page-nav{*/
+    /*grid-area: page-nav;*/
+/*}*/
+
+.page-header{
+    grid-area: page-header;
+}
+
+.col-left {
+    grid-area: col-left;
+    width: 30vw;
+    /*background: #1d68a7;*/
+}
+
+.col-center {
+    grid-area: col-center;
+    width: 40vw;
+    background: #2a9055;
+}
+
+.col-right {
+    grid-area: col-right;
+    width: 30vw;
+    background: #f6993f;
+}
+
+.subgrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+
+

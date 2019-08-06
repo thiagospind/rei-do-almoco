@@ -14,7 +14,7 @@
     <link href="{{ asset('css/rei.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid no-gutters bg-light">
+    <div>
         @component('navbar')
         @endcomponent
         <main role="main">

@@ -15,8 +15,6 @@ B
 public/css/rei.css,4\f\4ffdcc40475acf0dbe708f33db990d00517cb046
 S
 #app/Http/Controllers/Controller.php,2\e\2ed23e1749f02eb8e561f0a531d07863e7cf9fb9
-M
-storage/app/public/.gitignore,9\7\97928df0de452b98741ab5da29b5b240dbde3dce
 F
 config/filesystems.php,0\8\0851bcf6cd0903bba3a25c52b3b65e4e473a57d6
 >
@@ -37,3 +35,17 @@ S
 #resources/views/candidate.blade.php,2\0\206b80d7f22a0ce212cb593d928591c0bd0dc622
 N
 resources/views/vote.blade.php,3\8\3837110a1e5134c50fef276359900b0d33abffd1
+C
+config/database.php,6\9\69e3bd8ddf957a32ec5a3b80a87f8cc4bfe36a27
+D
+public/img/crown.svg,9\5\95569aa810b436a2efb5c6bfe1a3758c26599683
+?
+config/mail.php,2\d\2d414a971ebe9a05bd929c2805b4c963e8b1ea8d
+H
+app/Mail/WinnerEmail.php,1\a\1aa8708963ca57deddf22e022ffce3c43a13ecb2
+V
+&resources/views/email/winner.blade.php,f\b\fb597646ebad92fb232620f9afbb06b356fdac04
+Q
+!app/Console/Commands/WinEmail.php,6\d\6d34cd48bb374a551b659e0dddb815152f1ac6da
+F
+app/Console/Kernel.php,7\c\7cc3fc289d685e79a47c29e2cb905c549625e76b

@@ -11,13 +11,10 @@
 |
 */
 
-Route::get('/','CandidateController@index');
+Route::get('/','VoteController@index');
 Route::get('/candidato','CandidateController@index');
 Route::get('/votar','VoteController@index');
 Route::post('/votar','VoteController@store');
 Route::get('/candidato/novo','CandidateController@create');
 Route::post('/candidato/novo','CandidateController@store');
-Route::post('/candidato/editar','CandidateController@update');
-Route::get('/candidato/editar/{$id}','CandidateController@edit');
-Route::get('/candidato/deletar/{$id}','CandidateController@destroy');
 Route::get('/fechar','VoteController@closeVotation');

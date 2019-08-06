@@ -38,6 +38,11 @@
             <set />
           </value>
         </entry>
+        <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorEmailPonto.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="C:/Desenvolvimento/repo/RH/RH/app/Http/Controllers/ControladorSalario.php">
           <value>
             <set />
@@ -103,6 +108,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/Console/Commands/WinEmail.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Console/Kernel.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/Http/Controllers/CandidateController.php">
           <value>
             <set />
@@ -123,6 +138,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/Mail/WinnerEmail.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/Pretendente.php">
           <value>
             <set />
@@ -138,6 +158,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/config/database.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/config/mail.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/public/css/rei.css">
           <value>
             <set />
@@ -149,6 +179,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/resources/views/candidate.blade.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/views/email/winner.blade.php">
           <value>
             <set />
           </value>
