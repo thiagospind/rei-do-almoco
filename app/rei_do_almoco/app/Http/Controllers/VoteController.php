@@ -16,8 +16,9 @@ class VoteController extends Controller
     public function index(){
         $candidate = Candidate::paginate(4);
         $isTimeVote = $this->isTimeVote();
-        $weekWinner = $this->weekWinner();
-        return view('vote',compact('candidate','isTimeVote',$weekWinner));
+        $winner = new WeekVoteController();
+        $weekWinner = $winner->weekWinner();
+        return view('vote',compact('candidate','isTimeVote','weekWinner'));
     }
 
     public function store(Request $request){
@@ -47,7 +48,7 @@ class VoteController extends Controller
     public function closeVotation(){
         $winVote = DB::table('vote')
             ->join('candidate','vote.candidate_id','=','candidate.id')
-            ->select(DB::raw('count(*) as votes, candidate_id, time_vote, name, email'))
+            ->select(DB::raw('count(*) as votes, candidate_id, time_vote, name, email, week_year'))
             ->whereDate('time_vote','=',Carbon::now()->toDateString())
             ->groupBy(DB::raw('date(time_vote), candidate_id'))
             ->orderBy('votes','desc')
@@ -58,19 +59,5 @@ class VoteController extends Controller
             Mail::to($winVote[0]->email)
             ->send(new WinnerEmail($winVote));
         }
-    }
-
-    public function weekWinner(){
-        $date = new Carbon();
-        $week = $date->weekOfYear;
-
-        return DB::table('vote')
-            ->join('candidate','vote.candidate_id','=','candidate.id')
-            ->select(DB::raw('count(*) as votes, candidate_id, week_year, name, email'))
-            ->where('week_year','<',$week)
-            ->groupBy(DB::raw('week_year, candidate_id'))
-            ->orderBy('votes','desc')
-            ->limit(10)
-            ->get();
     }
 }

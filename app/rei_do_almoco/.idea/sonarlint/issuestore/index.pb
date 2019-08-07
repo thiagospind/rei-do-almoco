@@ -49,3 +49,11 @@ Q
 !app/Console/Commands/WinEmail.php,6\d\6d34cd48bb374a551b659e0dddb815152f1ac6da
 F
 app/Console/Kernel.php,7\c\7cc3fc289d685e79a47c29e2cb905c549625e76b
+@
+app/WeekVote.php,f\4\f455dcd431b484f7f4cdffe668971e6d4133bb7c
+[
++app/Http/Controllers/WeekVoteController.php,8\9\896aacb9788f72ab84d8045a5780e00bf9b97f75
+<
+app/King.php,a\b\ab297fdf5f83abe4670b0d69bff67620664c9b1b
+W
+'app/Http/Controllers/KingController.php,d\e\de311e6189d5be3dfc4cae3701971f27cf828a6b

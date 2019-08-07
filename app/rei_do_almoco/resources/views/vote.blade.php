@@ -30,10 +30,10 @@
                 @if(count($weekWinner) > 0)
                     @foreach($weekWinner as $winner)
                     <tr>
-                        <img src="{{asset('/storage/pictures'.$winner->picture)}}">
-                        <th>{{$winner->name}}</th>
-                        <th>{{$winner->week_year}}</th>
-                        <th>{{$winner->votes}}</th>
+                        <td class="align-middle"><img class="img-thumbnail" src="{{asset('/storage/pictures/'.$winner->picture)}}"></td>
+                        <td class="align-middle">{{$winner->name}}</td>
+                        <td class="align-middle">{{$winner->week_year}}</td>
+                        <td class="align-middle">{{$winner->qtd}}</td>
                     </tr>
                     @endforeach
                 @endif
@@ -56,14 +56,11 @@
             </div>
         </form>
         @endforeach
+            {{$candidate->links()}}
     </div>
 
     <div class="col-right"></div>
 
-
-    <div class="row justify-content-center">
-        {{$candidate->links()}}
-    </div>
     @endif
 {{--</div>--}}
 </section>

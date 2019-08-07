@@ -123,6 +123,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/Http/Controllers/KingController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/Http/Controllers/PretendenteController.php">
           <value>
             <set />
@@ -134,6 +139,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/Http/Controllers/VotoController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Http/Controllers/WeekVoteController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/Http/Controllers/WeekWinnerController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/King.php">
           <value>
             <set />
           </value>
@@ -154,6 +174,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/Voto.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/WeekVote.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/WeekWinner.php">
           <value>
             <set />
           </value>
