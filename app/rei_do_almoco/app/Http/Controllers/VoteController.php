@@ -22,7 +22,8 @@ class VoteController extends Controller
         $weekVote = new WeekVoteController();
         $weekWinner = $weekVote->weekWinner();
         $minorVote = $weekVote->minorVotes();
-        if($isTimeVote === "after"){
+
+        if ($isTimeVote === "after" && isset($candidate) && count($candidate) > 0) {
             $king = $this->lunchKing();
             $candidate = Candidate::find($king[0]->candidate_id);
             $votes = $king[0]->votes;

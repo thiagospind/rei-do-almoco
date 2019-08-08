@@ -49,9 +49,9 @@
                 <div class="row">
                     <div class="col-md-12 col_vote">
                         <div class="py-3 text-center">
-                            @if($isTimeVote == "true")
+                            @if($isTimeVote == 1)
                                 <h3>Vote nos candidatos a rei do almoço!</h3>
-                            @elseif($isTimeVote == "after")
+                            @elseif(count($candidate) > 0 && $isTimeVote == "after")
                                 <h3>Parabéns {{$candidate->name}} você foi escolhido o rei do almoço de hoje com {{$votes}} votos!</h3>
                             @endif
                         </div>
@@ -81,7 +81,7 @@
                     </div>
                     {{--</div>--}}
 
-                @elseif($isTimeVote === "after")
+                @elseif(count($candidate) > 0 && $isTimeVote === "after" )
                     <div class="row justify-content-center">
                         <div class="col-md-4">
                             <div class="card card-voto">
