@@ -39,7 +39,7 @@ class WinEmail extends Command
     public function handle()
     {
         $winemail = new VoteController();
-        $winemail->closeVotation();
+        $winemail->storeKing();
         $this->info('Email do vencedor enviado!');
     }
 }

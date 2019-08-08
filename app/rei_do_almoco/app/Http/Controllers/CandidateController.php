@@ -17,7 +17,7 @@ class CandidateController extends Controller
      */
     public function index()
     {
-        $candidate = Candidate::paginate(10);
+        $candidate = Candidate::paginate(3);
         return view('listCandidate',compact('candidate'));
     }
 
@@ -55,7 +55,7 @@ class CandidateController extends Controller
             $candidate->picture = $picture;
             $candidate->save();
             DB::commit();
-            return redirect('/candidato');
+            return redirect('/votar');
         } catch(\Exception $exception){
             if(is_file('/storage/app/public/picture/$picture')) {
                 Storage::delete($picture);

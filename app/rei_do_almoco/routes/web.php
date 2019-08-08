@@ -17,4 +17,4 @@ Route::get('/votar','VoteController@index');
 Route::post('/votar','VoteController@store');
 Route::get('/candidato/novo','CandidateController@create');
 Route::post('/candidato/novo','CandidateController@store');
-Route::get('/fechar','VoteController@closeVotation');
+Route::get('/fechar','VoteController@storeKing');
