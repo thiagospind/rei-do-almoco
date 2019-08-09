@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 left">
-                @if(count($weekWinner) > 0)
+                @if(isset($weekWinner) && count($weekWinner) > 0)
                 {{--<div class="container-fluid">--}}
                 <div class="py-3 text-center">
                     <h3>Reis das Semanas anteriores</h3>
@@ -51,15 +51,14 @@
                         <div class="py-3 text-center">
                             @if($isTimeVote == 1)
                                 <h3>Vote nos candidatos a rei do almoço!</h3>
-                            @elseif(count($candidate) > 0 && $isTimeVote == "after")
-                                <h3>Parabéns {{$candidate->name}} você foi escolhido o rei do almoço de hoje com {{$votes}} votos!</h3>
+                            @elseif(isset($winner) && count($winner) > 0 && $isTimeVote == "after")
+                                <h3>Parabéns {{$winner->name}} você foi escolhido o rei do almoço de hoje com {{$votes}} votos!</h3>
                             @endif
                         </div>
                     </div>
                 </div>
 
-                @if(count($candidate) > 0 && $isTimeVote == 1)
-                    {{--<div class="col-center subgrid">--}}
+                @if(isset($candidate) && count($candidate) > 0 && $isTimeVote == 1)
                     <div class="row justify-content-center">
                         @foreach( $candidate as $cand)
                             <div class="col-md-4">
@@ -79,17 +78,15 @@
                         @endforeach
                         {{$candidate->links()}}
                     </div>
-                    {{--</div>--}}
-
-                @elseif(count($candidate) > 0 && $isTimeVote === "after" )
+                @elseif(isset($winner) && count($winner) > 0 && $isTimeVote === "after" )
                     <div class="row justify-content-center">
                         <div class="col-md-4">
                             <div class="card card-voto">
-                                <input value="{{$candidate->id}}" name="id" id="id" hidden>
-                                <img src="{{asset('/storage/pictures/'.$candidate->picture)}}"
+                                <input value="{{$winner->id}}" name="id" id="id" hidden>
+                                <img src="{{asset('/storage/pictures/'.$winner->picture)}}"
                                      class="img-thumbnail" alt="...">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">{{$candidate->name}}</h5>
+                                    <h5 class="card-title">{{$winner->name}}</h5>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +94,7 @@
                 @endif
             </div>
             <div class="col-md-4 right">
-                @if(count($minorVote) > 0)
+                @if(isset($minorVote) && count($minorVote) > 0)
                     <div class="container-fluid">
                         <div class="py-3 text-center">
                             <h3>Candidatos menos votados</h3>

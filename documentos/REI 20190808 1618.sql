@@ -17,7 +17,7 @@
 --
 -- Create schema rei
 --
-
+use rei;
 --
 -- Temporary table structure for view `vw_king`
 --

@@ -22,13 +22,16 @@ class VoteController extends Controller
         $weekVote = new WeekVoteController();
         $weekWinner = $weekVote->weekWinner();
         $minorVote = $weekVote->minorVotes();
+        $votes = '';
 
         if ($isTimeVote === "after" && isset($candidate) && count($candidate) > 0) {
             $king = $this->lunchKing();
-            $candidate = Candidate::find($king[0]->candidate_id);
-            $votes = $king[0]->votes;
+            if(isset($king) && count($king) > 0) {
+                $winner = Candidate::find($king[0]->candidate_id);
+                $votes = $king[0]->votes;
+            }
         }
-        return view('vote',compact('candidate','isTimeVote','weekWinner','minorVote','config','votes'));
+        return view('vote',compact('candidate','isTimeVote','weekWinner','minorVote','config','votes','winner'));
     }
 
     public function store(Request $request){
