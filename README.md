@@ -33,3 +33,7 @@ Para rodar o projeto, executar o comando: "php artisan serve" na pasta raiz do p
 Para testar o envio de email, foi configurada a rota "localhost:8000/fechar" que vai gravar o rei do almoço do dia e enviar o email do almoço para o mesmo!
 
 Também é possivel enviar o email com o comando "php artisan winemail:send"
+
+Fiz um deploy do site em um dominio de teste também!
+
+http://www.temtudovale.site
